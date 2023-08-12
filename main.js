@@ -6,7 +6,7 @@ import { createPlanet } from './planet';
 
 const loader = new GLTFLoader();
 
-import starsTexture from './public/stars.jpg';
+import starsTexture from '/stars.jpg';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -40,13 +40,13 @@ let solarSys = {
   neptune: undefined,
 };
 
-loader.load('./public/model/Sun.glb', (gltf) => {
+loader.load('/model/Sun.glb', (gltf) => {
   sun = gltf.scene;
   gltf.scene.scale.set(1, 1, 1);
   // gltf.scene.position.x = 100;
   scene.add(gltf.scene);
 
-  loader.load('./public/model/Mercury.glb', (gltf) => {
+  loader.load('/model/Mercury.glb', (gltf) => {
     gltf.scene.scale.set(0.2, 0.2, 0.2);
     gltf.scene.position.x = 1000;
 
@@ -57,7 +57,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     sun.add(obj);
   });
 
-  loader.load('./public/model/Venus.glb', (gltf) => {
+  loader.load('/model/Venus.glb', (gltf) => {
     gltf.scene.scale.set(0.25, 0.25, 0.25);
     gltf.scene.position.x = 1500;
 
@@ -68,7 +68,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     sun.add(obj);
   });
 
-  loader.load('./public/model/EarthClouds.glb', (gltf) => {
+  loader.load('/model/EarthClouds.glb', (gltf) => {
     gltf.scene.scale.set(0.35, 0.35, 0.35);
     gltf.scene.position.x = 2500;
 
@@ -78,7 +78,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     obj.add(gltf.scene);
     sun.add(obj);
 
-    loader.load('./public/model/Moon.glb', (gltf) => {
+    loader.load('/model/Moon.glb', (gltf) => {
       gltf.scene.scale.set(0.4, 0.4, 0.4);
       gltf.scene.position.x = 1000;
 
@@ -90,7 +90,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     });
   });
 
-  loader.load('./public/model/Mars.glb', (gltf) => {
+  loader.load('/model/Mars.glb', (gltf) => {
     gltf.scene.scale.set(0.4, 0.4, 0.4);
     gltf.scene.position.x = 3500;
 
@@ -101,7 +101,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     sun.add(obj);
   });
 
-  loader.load('./public/model/Jupiter.glb', (gltf) => {
+  loader.load('/model/Jupiter.glb', (gltf) => {
     gltf.scene.scale.set(0.8, 0.8, 0.8);
     gltf.scene.position.x = 5000;
 
@@ -112,7 +112,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     sun.add(obj);
   });
 
-  loader.load('./public/model/Saturn.glb', (gltf) => {
+  loader.load('/model/Saturn.glb', (gltf) => {
     gltf.scene.scale.set(0.7, 0.7, 0.7);
     gltf.scene.position.x = 6500;
 
@@ -123,7 +123,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     sun.add(obj);
   });
 
-  loader.load('./public/model/Uranus.glb', (gltf) => {
+  loader.load('/model/Uranus.glb', (gltf) => {
     gltf.scene.scale.set(0.6, 0.6, 0.6);
     gltf.scene.position.x = 7500;
 
@@ -134,7 +134,7 @@ loader.load('./public/model/Sun.glb', (gltf) => {
     sun.add(obj);
   });
 
-  loader.load('./public/model/Neptune.glb', (gltf) => {
+  loader.load('/model/Neptune.glb', (gltf) => {
     gltf.scene.scale.set(0.55, 0.55, 0.55);
     gltf.scene.position.x = 8300;
 
@@ -158,9 +158,16 @@ const pointLight = new THREE.PointLight(0xffffff, 100000000, 10000000000);
 pointLight.position.set(0, 0, 0);
 scene.add(pointLight);
 
+window.addEventListener('resize', function () {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
 function animate() {
   requestAnimationFrame(animate);
-  // sun.rotation.y += 0.01;
+
+  sun.rotation.y += 0.01;
   solarSys.mercury.mesh.rotation.y += 0.09;
   solarSys.mercury.obj.rotation.y += 0.07;
 
@@ -171,7 +178,7 @@ function animate() {
   solarSys.earth.obj.rotation.y += 0.015;
 
   solarSys.earthMoon.mesh.rotation.y += 0.07;
-  solarSys.earthMoon.obj.rotation.y += 0.05;
+  solarSys.earthMoon.obj.rotation.y += 0.07;
 
   solarSys.mars.mesh.rotation.y += 0.03;
   solarSys.mars.obj.rotation.y += 0.008;
@@ -191,9 +198,3 @@ function animate() {
 }
 
 animate();
-
-window.addEventListener('resize', function () {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
