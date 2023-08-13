@@ -310,7 +310,7 @@ function onClickPlanet() {
         if (solarSys[key].name === name) {
           activePlanet = solarSys[key];
           addPlanet(activePlanet);
-          document.getElementById('info').style.display = 'flex';
+          // document.getElementById('info').style.display = 'flex';
           if (name === 'sun') {
             scene.add(camera);
           } else {
