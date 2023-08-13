@@ -1,0 +1,92 @@
+{
+  "sun": {
+    "name": "Sun",
+    "path": "/model/Sun.glb",
+    "distance": 0,
+    "rotationSpeed": 0.01,
+    "revolutionSpeed": 0,
+    "size": 1,
+    "description": "The central star of the solar system, a massive ball of hot plasma that provides light and energy to the planets."
+  },
+  "mercury": {
+    "name": "Mercury",
+    "path": "/model/Mercury.glb",
+    "distance": 1000,
+    "rotationSpeed": 0.09,
+    "revolutionSpeed": 0.007,
+    "size": 0.2,
+    "description": "The smallest planet in the solar system, with a barren and rocky surface. It experiences extreme temperature variations."
+  },
+  "venus": {
+    "name": "Venus",
+    "path": "/model/Venus.glb",
+    "distance": 1500,
+    "rotationSpeed": 0.07,
+    "revolutionSpeed": 0.005,
+    "size": 0.25,
+    "description": "Known as Earth's 'sister planet,' Venus has a thick atmosphere that traps heat, making it the hottest planet in the solar system."
+  },
+  "earth": {
+    "name": "Earth",
+    "path": "/model/EarthClouds.glb",
+    "distance": 2500,
+    "rotationSpeed": 0.05,
+    "revolutionSpeed": 0.0015,
+    "size": 0.35,
+    "description": "The only known planet to support life, Earth has a diverse ecosystem and a complex climate system."
+  },
+  "earthMoon": {
+    "name": "Moon",
+    "path": "/model/Moon.glb",
+    "distance": 1000,
+    "rotationSpeed": 0.07,
+    "revolutionSpeed": 0.007,
+    "size": 0.4,
+    "description": "Earth's natural satellite, the Moon plays a significant role in Earth's tides and has been a subject of human exploration."
+  },
+  "mars": {
+    "name": "Mars",
+    "path": "/model/Mars.glb",
+    "distance": 3500,
+    "rotationSpeed": 0.03,
+    "revolutionSpeed": 0.0008,
+    "size": 0.4,
+    "description": "Often called the 'Red Planet,' Mars has a thin atmosphere and features like valleys, polar ice caps, and the tallest volcano in the solar system."
+  },
+  "jupiter": {
+    "name": "Jupiter",
+    "path": "/model/Jupiter.glb",
+    "distance": 5000,
+    "rotationSpeed": 0.01,
+    "revolutionSpeed": 0.0005,
+    "size": 0.85,
+    "description": "The largest planet in the solar system, Jupiter is a gas giant with a strong magnetic field and a complex system of colorful bands and zones."
+  },
+  "saturn": {
+    "name": "Saturn",
+    "path": "/model/Saturn.glb",
+    "distance": 6500,
+    "rotationSpeed": 0.008,
+    "revolutionSpeed": 0.00015,
+    "size": 0.7,
+    "description": "Famous for its stunning ring system, Saturn is another gas giant with a unique appearance that makes it easily recognizable."
+  },
+  "uranus": {
+    "name": "Uranus",
+    "path": "/model/Uranus.glb",
+    "distance": 7500,
+    "rotationSpeed": 0.005,
+    "revolutionSpeed": 0.00007,
+    "size": 0.6,
+    "description": "Uranus is an ice giant with a blue-green color due to the presence of methane in its atmosphere. It rotates on its side compared to other planets."
+  },
+  "neptune": {
+    "name": "Neptune",
+    "path": "/model/Neptune.glb",
+    "distance": 8300,
+    "rotationSpeed": 0.002,
+    "revolutionSpeed": 0.00002,
+    "size": 0.55,
+    "description": "Neptune is another ice giant, known for its striking deep blue color. It has the strongest winds in the solar system and a series of dark spots."
+  }
+}

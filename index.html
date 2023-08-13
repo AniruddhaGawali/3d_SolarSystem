@@ -18,10 +18,38 @@
     />
   </head>
   <body>
-    <div id="main"></div>
+    <div id="main">
+      <nav class="nav">
+        <h1>SOLAR SYSTEM</h1>
+      </nav>
+      <section
+        id="info"
+        class="info"
+      >
+        <span
+          id="close"
+          class="close"
+          onclick="closeInfo()"
+          >x</span
+        >
+        <div id="planetImage"></div>
+        <div id="planetInfo"></div>
+      </section>
+    </div>
     <script
       type="module"
       src="/main.js"
     ></script>
+    <script
+      type="module"
+      src="/info.js"
+    ></script>
+
+    <script>
+      function closeInfo() {
+        const info = document.getElementById('info');
+        info.style.display = 'none';
+      }
+    </script>
   </body>
 </html>
